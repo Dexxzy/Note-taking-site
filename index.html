@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epic Note Taking App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div id="app-container">
+    <h1 id="app-title">Epic Note Taking App</h1>
+    <div id="theme-toggle-wrapper">
+      <input type="checkbox" id="theme-toggle" class="theme-toggle">
+      <label for="theme-toggle" class="theme-toggle-label">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <span class="ball"></span>
+      </label>
+    </div>
+
+    <div id="auth-page">
+      <div id="signup-form">
+        <h2>Sign Up</h2>
+        <form id="signup">
+          <label for="signup-username">Username:</label>
+          <input type="text" id="signup-username" required>
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <div id="login-form">
+        <h2>Login</h2>
+        <form id="login">
+          <label for="login-username">Username:</label>
+          <input type="text" id="login-username" required>
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="note-page" style="display:none;">
+      <h2>Your Notes</h2>
+      <input type="text" id="search-notes" placeholder="Search notes...">
+      <textarea id="note-content" placeholder="Write your note here..."></textarea>
+      <div id="char-count">0/500</div>
+      <button id="save-note"><i class="fas fa-save"></i> Save Note</button>
+      <h3>Saved Notes</h3>
+      <ul id="note-list"></ul>
+      <button id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
